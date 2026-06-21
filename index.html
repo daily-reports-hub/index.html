@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0f172a">
+    <title>武夷山 · 泉州亲子游 | 6天5晚行程</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0b1120;
+            --bg-secondary: #151e32;
+            --bg-card: rgba(30, 41, 59, 0.6);
+            --bg-card-hover: rgba(30, 41, 59, 0.85);
+            --border: rgba(148, 163, 184, 0.12);
+            --border-highlight: rgba(52, 211, 153, 0.3);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-primary: #34d399;
+            --accent-secondary: #2dd4bf;
+            --accent-warm: #fb7185;
+            --accent-gold: #fbbf24;
+            --accent-blue: #60a5fa;
+            --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+            --radius: 20px;
+            --radius-sm: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .bg-glow {
+            position: fixed;
+            top: -20%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(52, 211, 153, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .bg-glow-2 {
+            position: fixed;
+            bottom: -10%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(45, 212, 191, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 50% 50%, rgba(52, 211, 153, 0.08) 0%, transparent 50%),
+                linear-gradient(180deg, transparent 0%, var(--bg-primary) 100%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(52, 211, 153, 0.1);
+            border: 1px solid var(--border-highlight);
+            color: var(--accent-primary);
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 28px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--accent-primary);
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.3); }
+        }
+
+        .hero h1 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: clamp(40px, 10vw, 72px);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #34d399 50%, #2dd4bf 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(18px, 4vw, 24px);
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+
+        .meta-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 16px 24px;
+            border-radius: var(--radius-sm);
+            min-width: 130px;
+        }
+
+        .meta-item strong {
+            display: block;
+            font-size: 20px;
+            color: var(--accent-primary);
+            margin-bottom: 2px;
+        }
+
+        .meta-item span {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 13px;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-arrow {
+            width: 24px;
+            height: 24px;
+            border-right: 2px solid var(--accent-primary);
+            border-bottom: 2px solid var(--accent-primary);
+            transform: rotate(45deg);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--accent-primary);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: clamp(28px, 6vw, 40px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 16px;
+            max-width: 600px;
+        }
+
+        .family-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .family-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .family-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-highlight);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .member-avatar {
+            width: 68px;
+            height: 68px;
+            background: linear-gradient(135deg, rgba(52, 211, 153, 0.2) 0%, rgba(45, 212, 191, 0.2) 100%);
+            border: 1px solid var(--border-highlight);
+            color: var(--accent-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 16px;
+        }
+
+        .member-name {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .member-info {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .overview-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .overview-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .overview-card:hover::before {
+            opacity: 1;
+        }
+
+        .overview-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-highlight);
+            transform: translateY(-3px);
+        }
+
+        .overview-date {
+            font-size: 12px;
+            color: var(--accent-gold);
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .overview-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .overview-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .overview-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .tag-primary {
+            background: rgba(52, 211, 153, 0.12);
+            color: var(--accent-primary);
+        }
+
+        .tag-warm {
+            background: rgba(251, 113, 133, 0.12);
+            color: var(--accent-warm);
+        }
+
+        .tag-gold {
+            background: rgba(251, 191, 36, 0.12);
+            color: var(--accent-gold);
+        }
+
+        .tag-blue {
+            background: rgba(96, 165, 250, 0.12);
+            color: var(--accent-blue);
+        }
+
+        .day-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 24px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .day-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-highlight);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .day-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(52, 211, 153, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .day-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .day-number {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--accent-primary);
+            line-height: 1;
+            opacity: 0.8;
+        }
+
+        .day-title-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .day-date {
+            font-size: 13px;
+            color: var(--accent-gold);
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .day-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .day-theme {
+            font-size: 13px;
+            color: var(--text-secondary);
+            background: rgba(15, 23, 42, 0.6);
+            padding: 8px 16px;
+            border-radius: 50px;
+            border: 1px solid var(--border);
+            white-space: nowrap;
+        }
+
+        .day-summary {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding: 14px 16px;
+            background: rgba(15, 23, 42, 0.4);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+        }
+
+        .day-summary-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .day-summary-item strong {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            border-radius: 2px;
+            opacity: 0.4;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 22px;
+            padding-left: 20px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            background: var(--bg-secondary);
+            border: 2px solid var(--accent-primary);
+            border-radius: 50%;
+        }
+
+        .timeline-item.highlight::before {
+            background: var(--accent-primary);
+            box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.2);
+        }
+
+        .timeline-time {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--accent-primary);
+            background: rgba(52, 211, 153, 0.1);
+            padding: 4px 10px;
+            border-radius: 50px;
+            margin-bottom: 6px;
+        }
+
+        .timeline-content h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .timeline-content p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .timeline-detail {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .detail-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 6px;
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .detail-tag.transport {
+            background: rgba(96, 165, 250, 0.1);
+            border-color: rgba(96, 165, 250, 0.2);
+            color: var(--accent-blue);
+        }
+
+        .detail-tag.cost {
+            background: rgba(251, 191, 36, 0.1);
+            border-color: rgba(251, 191, 36, 0.2);
+            color: var(--accent-gold);
+        }
+
+        .detail-tag.duration {
+            background: rgba(251, 113, 133, 0.1);
+            border-color: rgba(251, 113, 133, 0.2);
+            color: var(--accent-warm);
+        }
+
+        .timeline-tip {
+            margin-top: 10px;
+            padding: 12px 16px;
+            background: rgba(251, 191, 36, 0.08);
+            border-left: 3px solid var(--accent-gold);
+            border-radius: 0 10px 10px 0;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .highlight-box {
+            margin-top: 24px;
+            padding: 18px 20px;
+            background: linear-gradient(135deg, rgba(52, 211, 153, 0.1) 0%, rgba(45, 212, 191, 0.05) 100%);
+            border: 1px solid var(--border-highlight);
+            border-radius: var(--radius-sm);
+        }
+
+        .highlight-box p {
+            color: var(--text-primary);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .tip-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .tip-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-highlight);
+            transform: translateY(-3px);
+        }
+
+        .tip-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, rgba(52, 211, 153, 0.2) 0%, rgba(45, 212, 191, 0.2) 100%);
+            border: 1px solid var(--border-highlight);
+            color: var(--accent-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .tip-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .tip-card p,
+        .tip-card li {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .tip-card ul {
+            padding-left: 18px;
+        }
+
+        .tip-card li {
+            margin-bottom: 6px;
+        }
+
+        .packing-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .pack-item {
+            background: rgba(52, 211, 153, 0.1);
+            color: var(--accent-primary);
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .cost-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+        }
+
+        .cost-table th,
+        .cost-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+
+        .cost-table th {
+            color: var(--accent-primary);
+            font-weight: 600;
+            background: rgba(52, 211, 153, 0.05);
+        }
+
+        .cost-table td {
+            color: var(--text-secondary);
+        }
+
+        .cost-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .cost-total {
+            margin-top: 16px;
+            padding: 16px;
+            background: rgba(52, 211, 153, 0.1);
+            border: 1px solid var(--border-highlight);
+            border-radius: var(--radius-sm);
+            text-align: center;
+        }
+
+        .cost-total strong {
+            color: var(--accent-primary);
+            font-size: 18px;
+        }
+
+        footer {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 60px 24px;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-heart {
+            color: var(--accent-warm);
+        }
+
+        .fab {
+            display: none;
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-primary);
+            font-size: 20px;
+            box-shadow: var(--shadow-lg);
+            z-index: 50;
+            text-decoration: none;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.6s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --radius: 16px;
+            }
+
+            .hero {
+                min-height: 100svh;
+                padding: 60px 16px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero-meta {
+                width: 100%;
+            }
+
+            .meta-item {
+                flex: 1;
+                min-width: 100px;
+                padding: 14px 12px;
+            }
+
+            .meta-item strong {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 48px 0;
+            }
+
+            .section-title {
+                font-size: 26px;
+            }
+
+            .family-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .overview-grid,
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .day-card {
+                padding: 22px;
+            }
+
+            .day-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .day-number {
+                font-size: 42px;
+            }
+
+            .day-title {
+                font-size: 20px;
+            }
+
+            .timeline {
+                padding-left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 16px;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .fab {
+                display: flex;
+            }
+
+            .day-summary {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .cost-table {
+                font-size: 13px;
+            }
+
+            .cost-table th,
+            .cost-table td {
+                padding: 10px 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .meta-item {
+                min-width: 80px;
+                padding: 12px 8px;
+            }
+
+            .meta-item strong {
+                font-size: 14px;
+            }
+
+            .meta-item span {
+                font-size: 11px;
+            }
+
+            .day-card {
+                padding: 18px;
+            }
+
+            .timeline-content h4 {
+                font-size: 15px;
+            }
+
+            .timeline-content p {
+                font-size: 13px;
+            }
+
+            .detail-tag {
+                font-size: 11px;
+            }
+        }
+
+        @media print {
+            .bg-glow, .bg-glow-2, .noise, .scroll-hint, .fab {
+                display: none;
+            }
+            body {
+                background: #fff;
+                color: #000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+    <div class="noise"></div>
+
+    <header class="hero" id="top">
+        <div class="hero-badge">2025 夏季亲子游</div>
+        <h1>武夷山 · 泉州</h1>
+        <p class="hero-subtitle">一家三口的茶香与海韵之旅</p>
+        <div class="hero-meta">
+            <div class="meta-item">
+                <strong>6月27日</strong>
+                <span>出发</span>
+            </div>
+            <div class="meta-item">
+                <strong>7月2日</strong>
+                <span>返程</span>
+            </div>
+            <div class="meta-item">
+                <strong>6天5晚</strong>
+                <span>武夷山2晚 · 泉州3晚</span>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span>向下滑动</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="reveal">
+            <div class="section-header">
+                <span class="section-label">Travelers</span>
+                <h2 class="section-title">出行成员</h2>
+                <p class="section-desc">这次旅行为一家三口量身定制，节奏适中，适合7岁小朋友的体力。</p>
+            </div>
+            <div class="family-grid">
+                <div class="family-card">
+                    <div class="member-avatar">👨</div>
+                    <div class="member-name">爸爸</div>
+                    <div class="member-info">42岁 · 主力背包 + 摄影师</div>
+                </div>
+                <div class="family-card">
+                    <div class="member-avatar">👩</div>
+                    <div class="member-name">妈妈</div>
+                    <div class="member-info">36岁 · 行程总管 + 美食向导</div>
+                </div>
+                <div class="family-card">
+                    <div class="member-avatar">👧</div>
+                    <div class="member-name">小女儿</div>
+                    <div class="member-info">即将7岁 · 小小旅行家</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <div class="section-header">
+                <span class="section-label">Overview</span>
+                <h2 class="section-title">行程总览</h2>
+                <p class="section-desc">整体节奏张弛有度，既有武夷山的山水茶香，也有泉州古城的烟火人文。</p>
+            </div>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="overview-date">6月27日 周五</div>
+                    <h3>上海 → 武夷山</h3>
+                    <p>中午高铁出发，下午抵达入住大红袍山庄，当晚观看印象大红袍</p>
+                    <div class="overview-tags">
+                        <span class="tag tag-warm">抵达</span>
+                        <span class="tag tag-gold">印象大红袍</span>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-date">6月28日 周六</div>
+                    <h3>九曲溪竹筏</h3>
+                    <p>清晨竹筏漂流，漫步武夷宫宋街，午后午休，傍晚轻徒步</p>
+                    <div class="overview-tags">
+                        <span class="tag tag-primary">竹筏漂流</span>
+                        <span class="tag tag-gold">轻徒步</span>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-date">6月29日 周日</div>
+                    <h3>武夷山 → 泉州</h3>
+                    <p>上午岩骨花香漫游道，下午高铁转场泉州，入住东海悦华</p>
+                    <div class="overview-tags">
+                        <span class="tag tag-primary">茶山步道</span>
+                        <span class="tag tag-warm">转场</span>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-date">6月30日 周一</div>
+                    <h3>泉州古城</h3>
+                    <p>开元寺、西街、中山路、天后宫，感受宋元遗韵</p>
+                    <div class="overview-tags">
+                        <span class="tag tag-gold">古城</span>
+                        <span class="tag tag-primary">开元寺</span>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-date">7月1日 周二</div>
+                    <h3>洛阳桥 + 五店市</h3>
+                    <p>古桥海风、红砖古厝，轻松惬意的一天</p>
+                    <div class="overview-tags">
+                        <span class="tag tag-primary">洛阳桥</span>
+                        <span class="tag tag-gold">五店市</span>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-date">7月2日 周三</div>
+                    <h3>泉州 → 上海</h3>
+                    <p>上午轻逛，午餐后高铁返程</p>
+                    <div class="overview-tags">
+                        <span class="tag tag-warm">返程</span>
+                        <span class="tag tag-primary">博物馆</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header reveal">
+                <span class="section-label">Itinerary</span>
+                <h2 class="section-title">每日行程</h2>
+                <p class="section-desc">每天安排都考虑了小朋友的体力，留有午休时间。已补充交通方式、耗时与费用参考。</p>
+            </div>
+
+            <article class="day-card reveal">
+                <div class="day-header">
+                    <div style="display: flex; align-items: center; gap: 16px;">
+                        <div class="day-number">01</div>
+                        <div class="day-title-group">
+                            <div class="day-date">6月27日 星期五</div>
+                            <div class="day-title">上海 → 武夷山</div>
+                        </div>
+                    </div>
+                    <div class="day-theme">抵达 · 当晚赏《印象大红袍》</div>
+                </div>
+                <div class="day-summary">
+                    <div class="day-summary-item">🚄 <strong>高铁</strong> 上海→南平 约3.5h</div>
+                    <div class="day-summary-item">🚗 <strong>打车</strong> 南平站→酒店 约40min</div>
+                    <div class="day-summary-item">💰 <strong>今日交通</strong> 约160–220元</div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-time">12:00</span>
+                        <div class="timeline-content">
+                            <h4>上海出发</h4>
+                            <p>从上海虹桥/上海站乘坐高铁前往<strong>南平市站</strong>（原武夷山东站），车程约3.5小时</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚄 高铁二等座约350–450元/人</span>
+                                <span class="detail-tag duration">⏱ 约3.5小时</span>
+                                <span class="detail-tag cost">💰 儿童1.2–1.5m半价</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">15:30</span>
+                        <div class="timeline-content">
+                            <h4>抵达南平市站</h4>
+                            <p>出站后打车或预约网约车，前往<strong>武夷山大红袍山庄</strong></p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 网约车/出租车</span>
+                                <span class="detail-tag duration">⏱ 约35–40分钟</span>
+                                <span class="detail-tag cost">💰 约80–120元/车</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">17:00</span>
+                        <div class="timeline-content">
+                            <h4>入住大红袍山庄</h4>
+                            <p>办理入住，稍作休整，熟悉茶园环绕的环境</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🏨 大红袍山庄（住2晚）</span>
+                                <span class="detail-tag cost">💰 参考价800–1500元/晚</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">18:30</span>
+                        <div class="timeline-content">
+                            <h4>晚餐：初尝武夷味</h4>
+                            <p>可酒店内用餐，或打车至三姑度假区品尝当地菜</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 酒店→三姑度假区约10分钟</span>
+                                <span class="detail-tag cost">💰 打车约15–25元，晚餐约150–250元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item highlight">
+                        <span class="timeline-time">20:00 / 20:30</span>
+                        <div class="timeline-content">
+                            <h4>观看《印象大红袍》</h4>
+                            <p>张艺谋导演的山水实景演出，以茶文化为主题，舞台可360度旋转，视觉震撼，约70分钟</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 酒店→剧场约10分钟</span>
+                                <span class="detail-tag duration">⏱ 演出约70分钟</span>
+                                <span class="detail-tag cost">💰 门票约200–300元/人，打车约15–25元</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <p>✨ 特别调整：将《印象大红袍》安排在抵达当晚，第二天可轻松游玩竹筏，行程更从容。</p>
+                </div>
+            </article>
+
+            <article class="day-card reveal">
+                <div class="day-header">
+                    <div style="display: flex; align-items: center; gap: 16px;">
+                        <div class="day-number">02</div>
+                        <div class="day-title-group">
+                            <div class="day-date">6月28日 星期六</div>
+                            <div class="day-title">九曲溪竹筏漂流</div>
+                        </div>
+                    </div>
+                    <div class="day-theme">山水精华 · 午后避暑</div>
+                </div>
+                <div class="day-summary">
+                    <div class="day-summary-item">🚣 <strong>竹筏</strong> 九曲溪漂流约90min</div>
+                    <div class="day-summary-item">🚗 <strong>打车</strong> 酒店↔码头约20min</div>
+                    <div class="day-summary-item">💰 <strong>今日交通+门票</strong> 约800–1100元</div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-time">07:30</span>
+                        <div class="timeline-content">
+                            <h4>酒店早餐</h4>
+                            <p>享用早餐，为竹筏之旅储备能量</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item highlight">
+                        <span class="timeline-time">08:30 – 11:00</span>
+                        <div class="timeline-content">
+                            <h4>九曲溪竹筏漂流</h4>
+                            <p>从<strong>星村码头</strong>顺流至武夷宫码头，约90分钟。两岸奇峰林立，溪水清澈见底</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 酒店→星村码头约20–25分钟</span>
+                                <span class="detail-tag duration">⏱ 漂流约90分钟</span>
+                                <span class="detail-tag cost">💰 竹筏+观光车套票约200–250元/人，打车约40–60元</span>
+                                <span class="detail-tag cost">💰 艄公小费约20元/人</span>
+                            </div>
+                            <div class="timeline-tip">
+                                💡 建议给艄公小费（约20元/人），讲解更生动；务必做好防晒。遇暴雨水位上涨可能停航，需关注景区公告。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">11:00 – 12:00</span>
+                        <div class="timeline-content">
+                            <h4>武夷宫 & 宋街</h4>
+                            <p>竹筏终点上岸后漫步古街，感受武夷文化，选购小纪念品</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚶 码头步行即达</span>
+                                <span class="detail-tag cost">💰 免费（已含在景区门票内）</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">12:30</span>
+                        <div class="timeline-content">
+                            <h4>午餐</h4>
+                            <p>在武夷宫附近或三姑度假区用餐，清淡为主</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 武夷宫→三姑度假区约10分钟</span>
+                                <span class="detail-tag cost">💰 打车约15–25元，午餐约120–200元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">14:00 – 16:30</span>
+                        <div class="timeline-content">
+                            <h4>酒店午休</h4>
+                            <p>避开正午暑热，打车回酒店好好休息</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 三姑度假区→酒店约10分钟</span>
+                                <span class="detail-tag cost">💰 打车约15–25元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">16:30</span>
+                        <div class="timeline-content">
+                            <h4>傍晚轻徒步</h4>
+                            <p>大王峰山脚步道散步，或玉女峰溪边玩水拍照</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 酒店→大王峰/玉女峰约10–15分钟</span>
+                                <span class="detail-tag duration">⏱ 散步约1小时</span>
+                                <span class="detail-tag cost">💰 打车约15–25元</span>
+                            </div>
+                            <div class="timeline-tip">
+                                💡 大王峰全程台阶较多，建议只走一段即可，不必强求登顶。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="day-card reveal">
+                <div class="day-header">
+                    <div style="display: flex; align-items: center; gap: 16px;">
+                        <div class="day-number">03</div>
+                        <div class="day-title-group">
+                            <div class="day-date">6月29日 星期日</div>
+                            <div class="day-title">武夷山 → 泉州</div>
+                        </div>
+                    </div>
+                    <div class="day-theme">茶山漫步 · 转场海韵古城</div>
+                </div>
+                <div class="day-summary">
+                    <div class="day-summary-item">🚶 <strong>轻徒步</strong> 岩骨花香约3–4km</div>
+                    <div class="day-summary-item">🚄 <strong>高铁</strong> 南平→泉州 约2.5–3h</div>
+                    <div class="day-summary-item">💰 <strong>今日交通</strong> 约700–950元</div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-time">08:00</span>
+                        <div class="timeline-content">
+                            <h4>早餐 & 退房</h4>
+                            <p>早餐后退房，行李随车或寄存前台</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item highlight">
+                        <span class="timeline-time">09:00 – 12:00</span>
+                        <div class="timeline-content">
+                            <h4>大红袍景区 · 岩骨花香漫游道</h4>
+                            <p>约<strong>3–4公里</strong>平缓步道，茶园、岩壁、溪流相伴，适合7岁孩子的轻徒步</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 酒店→大红袍景区约15–20分钟</span>
+                                <span class="detail-tag duration">⏱ 徒步约2–2.5小时</span>
+                                <span class="detail-tag cost">💰 打车约25–35元（含观光车，已购套票）</span>
+                            </div>
+                            <div class="timeline-tip">
+                                💡 若水帘洞水量不大，或孩子走累了，可走一段后原路返回。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">12:30</span>
+                        <div class="timeline-content">
+                            <h4>午餐 & 取行李</h4>
+                            <p>返回三姑度假区用餐，随后回酒店取行李，打车前往南平市站</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 大红袍→三姑度假区约15分钟；酒店→南平市站约35–40分钟</span>
+                                <span class="detail-tag cost">💰 打车合计约100–150元，午餐约120–200元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">13:30</span>
+                        <div class="timeline-content">
+                            <h4>高铁前往泉州</h4>
+                            <p>乘坐高铁从南平市站出发，车程约2.5–3小时，可在车上小憩</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚄 高铁二等座</span>
+                                <span class="detail-tag duration">⏱ 约2.5–3小时</span>
+                                <span class="detail-tag cost">💰 约150–220元/人</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">16:30</span>
+                        <div class="timeline-content">
+                            <h4>抵达泉州 · 入住东海悦华酒店</h4>
+                            <p>泉州站打车约30分钟抵达酒店</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 网约车/出租车</span>
+                                <span class="detail-tag duration">⏱ 约30–40分钟</span>
+                                <span class="detail-tag cost">💰 约40–60元/车</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">18:30</span>
+                        <div class="timeline-content">
+                            <h4>泉州第一餐</h4>
+                            <p>面线糊、姜母鸭、四果汤，开启泉州美食之旅</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 酒店→市区约20–30分钟</span>
+                                <span class="detail-tag cost">💰 打车约25–40元，晚餐约120–200元</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="day-card reveal">
+                <div class="day-header">
+                    <div style="display: flex; align-items: center; gap: 16px;">
+                        <div class="day-number">04</div>
+                        <div class="day-title-group">
+                            <div class="day-date">6月30日 星期一</div>
+                            <div class="day-title">泉州古城一日游</div>
+                        </div>
+                    </div>
+                    <div class="day-theme">宋元遗韵 · 古城烟火</div>
+                </div>
+                <div class="day-summary">
+                    <div class="day-summary-item">🚗 <strong>打车</strong> 酒店↔古城约25min</div>
+                    <div class="day-summary-item">🚶 <strong>古城内</strong> 步行+小白车</div>
+                    <div class="day-summary-item">💰 <strong>今日交通</strong> 约80–150元</div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-time">08:30</span>
+                        <div class="timeline-content">
+                            <h4>酒店早餐</h4>
+                            <p>在东海悦华酒店享用早餐，精神饱满出发</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item highlight">
+                        <span class="timeline-time">09:30</span>
+                        <div class="timeline-content">
+                            <h4>开元寺</h4>
+                            <p>从西街入口进入，参观东西塔、大雄宝殿、千年古桑树</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 酒店→开元寺/西街约20–30分钟</span>
+                                <span class="detail-tag duration">⏱ 游览约1小时</span>
+                                <span class="detail-tag cost">💰 打车约25–40元，门票免费</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">10:45</span>
+                        <div class="timeline-content">
+                            <h4>漫步西街</h4>
+                            <p>一路逛特色小店，品尝满煎糕、石花膏、吴氏手工麻糍等小吃</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚶 从开元寺步行即达</span>
+                                <span class="detail-tag cost">💰 小吃约50–100元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">12:30</span>
+                        <div class="timeline-content">
+                            <h4>午餐</h4>
+                            <p>东兴牛肉店或好成财牛排馆</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚶 西街步行可达</span>
+                                <span class="detail-tag cost">💰 午餐约100–180元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item highlight">
+                        <span class="timeline-time">14:00</span>
+                        <div class="timeline-content">
+                            <h4>古城精华景点</h4>
+                            <p>钟楼 → 中山路骑楼 → 府文庙 → 清净寺 → 关岳庙 → 天后宫</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚶 步行 + 🛺 小白车（约2元/人/次）</span>
+                                <span class="detail-tag duration">⏱ 约2–3小时</span>
+                                <span class="detail-tag cost">💰 小白车约10–20元，清净寺约3元/人，其余免费</span>
+                            </div>
+                            <div class="timeline-tip">
+                                💡 不必全部打卡，精选2–3处即可，根据孩子状态灵活调整。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">16:30</span>
+                        <div class="timeline-content">
+                            <h4>蟳埔村簪花体验（可选）</h4>
+                            <p>若小朋友还有精力，可前往蟳埔村体验簪花围，小女孩会非常喜欢拍照留念</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 古城→蟳埔村约15–20分钟</span>
+                                <span class="detail-tag cost">💰 打车约20–30元，簪花+服饰约40–80元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">18:30</span>
+                        <div class="timeline-content">
+                            <h4>晚餐：姜母鸭</h4>
+                            <p>斯丹姜母鸭或忠记盐烧鸭，香气扑鼻</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 可打车或小白车</span>
+                                <span class="detail-tag cost">💰 晚餐约150–250元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">20:00</span>
+                        <div class="timeline-content">
+                            <h4>返回酒店</h4>
+                            <p>打车回东海悦华酒店，可在滨海公园附近散步吹海风</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 市区→酒店约20–30分钟</span>
+                                <span class="detail-tag cost">💰 打车约25–40元</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="day-card reveal">
+                <div class="day-header">
+                    <div style="display: flex; align-items: center; gap: 16px;">
+                        <div class="day-number">05</div>
+                        <div class="day-title-group">
+                            <div class="day-date">7月1日 星期二</div>
+                            <div class="day-title">洛阳桥 + 五店市</div>
+                        </div>
+                    </div>
+                    <div class="day-theme">古桥遗风 · 红砖古厝</div>
+                </div>
+                <div class="day-summary">
+                    <div class="day-summary-item">🚗 <strong>包车/打车</strong> 往返各景点</div>
+                    <div class="day-summary-item">⏱ <strong>总车程</strong> 约2–2.5h</div>
+                    <div class="day-summary-item">💰 <strong>今日交通</strong> 约200–320元</div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-time">08:30</span>
+                        <div class="timeline-content">
+                            <h4>酒店早餐</h4>
+                            <p>慢慢享用早餐，今天行程相对轻松</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item highlight">
+                        <span class="timeline-time">09:30</span>
+                        <div class="timeline-content">
+                            <h4>洛阳桥</h4>
+                            <p>中国四大古桥之一，桥长约1公里，走来回约40–60分钟，海风习习</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 酒店→洛阳桥约30–40分钟</span>
+                                <span class="detail-tag duration">⏱ 游览约1小时</span>
+                                <span class="detail-tag cost">💰 打车约40–60元，门票免费</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">11:30</span>
+                        <div class="timeline-content">
+                            <h4>返回市区午餐</h4>
+                            <p>在市区找一家本地人多的餐馆，尝尝泉州家常菜</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 洛阳桥→市区约30分钟</span>
+                                <span class="detail-tag cost">💰 打车约30–50元，午餐约120–200元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item highlight">
+                        <span class="timeline-time">13:30</span>
+                        <div class="timeline-content">
+                            <h4>五店市传统街区</h4>
+                            <p>闽南红砖古厝，咖啡馆、书店、特色小店，适合亲子慢逛拍照</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 市区→五店市约20–30分钟</span>
+                                <span class="detail-tag duration">⏱ 游览约2–3小时</span>
+                                <span class="detail-tag cost">💰 打车约25–40元，门票免费</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">16:30</span>
+                        <div class="timeline-content">
+                            <h4>返回酒店休息</h4>
+                            <p>回东海悦华酒店休整，避开午后炎热</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 五店市→酒店约30–40分钟</span>
+                                <span class="detail-tag cost">💰 打车约40–60元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">18:00</span>
+                        <div class="timeline-content">
+                            <h4>晚餐</h4>
+                            <p>东海片区海鲜大排档，或再去市区吃小吃</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 酒店附近或打车至市区</span>
+                                <span class="detail-tag cost">💰 打车约20–40元，晚餐约150–300元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">20:00</span>
+                        <div class="timeline-content">
+                            <h4>泉州湾夜景</h4>
+                            <p>滨海公园散步，吹着海风结束泉州之行</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚶 酒店附近步行</span>
+                                <span class="detail-tag cost">💰 免费</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="day-card reveal">
+                <div class="day-header">
+                    <div style="display: flex; align-items: center; gap: 16px;">
+                        <div class="day-number">06</div>
+                        <div class="day-title-group">
+                            <div class="day-date">7月2日 星期三</div>
+                            <div class="day-title">泉州 → 上海</div>
+                        </div>
+                    </div>
+                    <div class="day-theme">悠闲告别 · 高铁返程</div>
+                </div>
+                <div class="day-summary">
+                    <div class="day-summary-item">🚗 <strong>打车</strong> 酒店→车站约35min</div>
+                    <div class="day-summary-item">🚄 <strong>高铁</strong> 泉州→上海 约5–6h</div>
+                    <div class="day-summary-item">💰 <strong>今日交通</strong> 约450–750元/人</div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-time">08:00</span>
+                        <div class="timeline-content">
+                            <h4>酒店早餐 & 退房</h4>
+                            <p>早餐后退房，将行李寄存在酒店前台</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item highlight">
+                        <span class="timeline-time">09:30</span>
+                        <div class="timeline-content">
+                            <h4>上午轻逛（三选一）</h4>
+                            <p>海外交通史博物馆 · 闽台缘博物馆 · 酒店附近休闲</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 酒店→博物馆约20–30分钟</span>
+                                <span class="detail-tag cost">💰 打车约25–40元，博物馆免费</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">11:30</span>
+                        <div class="timeline-content">
+                            <h4>告别午餐</h4>
+                            <p>再吃一碗热腾腾的面线糊或牛肉羹</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 可酒店附近或市区</span>
+                                <span class="detail-tag cost">💰 午餐约80–150元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">12:30</span>
+                        <div class="timeline-content">
+                            <h4>前往泉州站</h4>
+                            <p>取回行李，打车前往车站，预留充足的候车时间</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 酒店→泉州站约30–40分钟</span>
+                                <span class="detail-tag cost">💰 打车约40–60元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">13:00+</span>
+                        <div class="timeline-content">
+                            <h4>高铁返程上海</h4>
+                            <p>结束愉快的武夷山·泉州亲子之旅</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚄 高铁二等座</span>
+                                <span class="detail-tag duration">⏱ 约5–6小时</span>
+                                <span class="detail-tag cost">💰 约350–500元/人</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="reveal">
+            <div class="section-header">
+                <span class="section-label">Budget</span>
+                <h2 class="section-title">费用参考</h2>
+                <p class="section-desc">以下为一家三口（2大1小）的大致费用估算，仅供参考，实际以购票/消费时为准。</p>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🚄</div>
+                    <h3>大交通</h3>
+                    <table class="cost-table">
+                        <tr><th>项目</th><th>费用参考</th></tr>
+                        <tr><td>上海 → 南平市站（二等座）</td><td>约350–450元/人</td></tr>
+                        <tr><td>南平市站 → 泉州站（二等座）</td><td>约150–220元/人</td></tr>
+                        <tr><td>泉州站 → 上海（二等座）</td><td>约350–500元/人</td></tr>
+                        <tr><td>儿童票（1.2–1.5m）</td><td>二等座半价</td></tr>
+                    </table>
+                    <div class="cost-total">
+                        两大一小高铁合计约 <strong>1500–2200元</strong>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🎫</div>
+                    <h3>门票 & 演出</h3>
+                    <table class="cost-table">
+                        <tr><th>项目</th><th>费用参考</th></tr>
+                        <tr><td>武夷山观光车+竹筏套票</td><td>约200–250元/人</td></tr>
+                        <tr><td>《印象大红袍》演出</td><td>约200–300元/人</td></tr>
+                        <tr><td>九曲溪艄公小费</td><td>约20元/人</td></tr>
+                        <tr><td>开元寺/关岳庙/天后宫等</td><td>免费</td></tr>
+                        <tr><td>清净寺</td><td>约3元/人</td></tr>
+                        <tr><td>洛阳桥/五店市</td><td>免费</td></tr>
+                    </table>
+                    <div class="cost-total">
+                        两大一小约 <strong>1000–1600元</strong>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🚗</div>
+                    <h3>当地交通</h3>
+                    <table class="cost-table">
+                        <tr><th>项目</th><th>费用参考</th></tr>
+                        <tr><td>武夷山当地打车（2天）</td><td>约300–500元</td></tr>
+                        <tr><td>泉州当地打车（3天）</td><td>约400–700元</td></tr>
+                        <tr><td>泉州古城小白车</td><td>约2元/人/次</td></tr>
+                    </table>
+                    <div class="cost-total">
+                        全程当地交通约 <strong>700–1200元</strong>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🏨</div>
+                    <h3>住宿 & 餐饮</h3>
+                    <table class="cost-table">
+                        <tr><th>项目</th><th>费用参考</th></tr>
+                        <tr><td>大红袍山庄（2晚）</td><td>约1600–3000元</td></tr>
+                        <tr><td>东海悦华酒店（3晚）</td><td>约2400–4500元</td></tr>
+                        <tr><td>每日餐饮（3人）</td><td>约300–500元/天</td></tr>
+                    </table>
+                    <div class="cost-total">
+                        住宿+餐饮约 <strong>5800–10500元</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="highlight-box" style="margin-top: 24px; text-align: center;">
+                <p><strong>💰 全程预估总费用（不含购物）：约9000–15500元</strong><br><span style="color: var(--text-secondary);">丰俭由人，酒店档次和餐饮选择对总价影响较大</span></p>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <div class="section-header">
+                <span class="section-label">Tips</span>
+                <h2 class="section-title">实用贴士</h2>
+                <p class="section-desc">这些建议能让亲子旅行更轻松、更顺利。</p>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🎫</div>
+                    <h3>门票预约</h3>
+                    <ul>
+                        <li>武夷山免大门票，观光车+竹筏票单独购买</li>
+                        <li>提前在"武夷山旅游"公众号预约竹筏</li>
+                        <li>印象大红袍提前1–2天订票</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🚗</div>
+                    <h3>交通建议</h3>
+                    <ul>
+                        <li>武夷山景点分散，建议全程网约车/出租车</li>
+                        <li>泉州古城内可乘"小白车"，约2元/人/次</li>
+                        <li>东海悦华离老城约20分钟车程</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">☀️</div>
+                    <h3>天气防暑</h3>
+                    <ul>
+                        <li>6月底福建气温约28–34℃，午后闷热</li>
+                        <li>行程已安排午休，避免中暑</li>
+                        <li>必备防晒、帽子、手持风扇、驱蚊液</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🍜</div>
+                    <h3>美食提醒</h3>
+                    <ul>
+                        <li>武夷山：岚谷熏鹅、红眼鱼、猫爪菇</li>
+                        <li>泉州：面线糊、姜母鸭、牛排、四果汤</li>
+                        <li>土笋冻可尝试，但不一定适合小朋友</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🎒</div>
+                    <h3>儿童装备</h3>
+                    <div class="packing-list">
+                        <span class="pack-item">轻便运动鞋</span>
+                        <span class="pack-item">防晒衣帽</span>
+                        <span class="pack-item">替换衣物</span>
+                        <span class="pack-item">小零食</span>
+                        <span class="pack-item">防蚊液</span>
+                        <span class="pack-item">手持风扇</span>
+                        <span class="pack-item">水壶</span>
+                        <span class="pack-item">小绘本/玩具</span>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">⛰️</div>
+                    <h3>爬山强度</h3>
+                    <ul>
+                        <li>本行程以竹筏、平路步道为主</li>
+                        <li>岩骨花香漫游道约3–4公里，平缓好走</li>
+                        <li>大王峰、天游峰等较陡山峰量力而行</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>祝您一家旅途愉快，收获满满的美好回忆 <span class="footer-heart">❤</span></p>
+        <p style="margin-top: 8px; font-size: 13px; color: var(--text-muted);">武夷山 · 泉州 · 6天5晚亲子游行程</p>
+    </footer>
+
+    <a href="#top" class="fab">↑</a>
+
+    <script>
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        const fab = document.querySelector('.fab');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 300) {
+                fab.style.opacity = '1';
+                fab.style.transform = 'translateY(0)';
+            } else {
+                fab.style.opacity = '0';
+                fab.style.transform = 'translateY(20px)';
+            }
+        });
+    </script>
+</body>
+</html>
