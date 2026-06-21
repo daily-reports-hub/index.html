@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#0f172a">
+    <meta name="theme-color" content="#f5f7fa">
     <title>武夷山 · 泉州亲子游 | 6天5晚行程</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #0b1120;
-            --bg-secondary: #151e32;
-            --bg-card: rgba(30, 41, 59, 0.6);
-            --bg-card-hover: rgba(30, 41, 59, 0.85);
-            --border: rgba(148, 163, 184, 0.12);
-            --border-highlight: rgba(52, 211, 153, 0.3);
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --accent-primary: #34d399;
-            --accent-secondary: #2dd4bf;
-            --accent-warm: #fb7185;
-            --accent-gold: #fbbf24;
-            --accent-blue: #60a5fa;
-            --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-            --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
-            --radius: 20px;
-            --radius-sm: 12px;
+            --bg-primary: #f5f7fa;
+            --bg-secondary: #eef2f7;
+            --bg-card: rgba(255, 255, 255, 0.72);
+            --bg-card-hover: rgba(255, 255, 255, 0.92);
+            --border: rgba(0, 0, 0, 0.06);
+            --border-highlight: rgba(0, 122, 255, 0.25);
+            --text-primary: #1c1c1e;
+            --text-secondary: #5a5a5e;
+            --text-muted: #8e8e93;
+            --accent-primary: #007aff;
+            --accent-secondary: #34c759;
+            --accent-warm: #ff3b30;
+            --accent-gold: #ff9500;
+            --accent-blue: #5856d6;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
+            --radius: 24px;
+            --radius-sm: 16px;
         }
 
         * {
@@ -41,7 +41,8 @@
 
         body {
             font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: var(--bg-primary);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 50%, #f0f4f8 100%);
+            background-attachment: fixed;
             color: var(--text-primary);
             line-height: 1.7;
             min-height: 100vh;
@@ -54,7 +55,7 @@
             right: -10%;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(52, 211, 153, 0.12) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(0, 122, 255, 0.12) 0%, transparent 70%);
             pointer-events: none;
             z-index: 0;
         }
@@ -65,7 +66,7 @@
             left: -10%;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(45, 212, 191, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(88, 86, 214, 0.08) 0%, transparent 70%);
             pointer-events: none;
             z-index: 0;
         }
@@ -76,7 +77,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.03;
+            opacity: 0.015;
             pointer-events: none;
             z-index: 1;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
@@ -107,7 +108,7 @@
             position: absolute;
             inset: 0;
             background: 
-                radial-gradient(circle at 50% 50%, rgba(52, 211, 153, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(0, 122, 255, 0.08) 0%, transparent 50%),
                 linear-gradient(180deg, transparent 0%, var(--bg-primary) 100%);
             pointer-events: none;
         }
@@ -117,7 +118,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(52, 211, 153, 0.1);
+            background: rgba(0, 122, 255, 0.1);
             border: 1px solid var(--border-highlight);
             color: var(--accent-primary);
             padding: 10px 22px;
@@ -126,7 +127,7 @@
             font-weight: 600;
             letter-spacing: 1.5px;
             margin-bottom: 28px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px) saturate(180%);
         }
 
         .hero-badge::before {
@@ -154,7 +155,7 @@
             font-size: 14px;
             font-weight: 500;
             text-decoration: none;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px) saturate(180%);
             transition: all 0.3s ease;
             box-shadow: var(--shadow);
         }
@@ -198,7 +199,7 @@
             font-weight: 700;
             line-height: 1.1;
             margin-bottom: 20px;
-            background: linear-gradient(135deg, #f8fafc 0%, #34d399 50%, #2dd4bf 100%);
+            background: linear-gradient(135deg, #1c1c1e 0%, #007aff 50%, #34c759 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -315,7 +316,7 @@
             padding: 28px 20px;
             text-align: center;
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px) saturate(180%);
         }
 
         .family-card:hover {
@@ -328,7 +329,7 @@
         .member-avatar {
             width: 68px;
             height: 68px;
-            background: linear-gradient(135deg, rgba(52, 211, 153, 0.2) 0%, rgba(45, 212, 191, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.15) 0%, rgba(88, 86, 214, 0.15) 100%);
             border: 1px solid var(--border-highlight);
             color: var(--accent-primary);
             border-radius: 50%;
@@ -424,17 +425,17 @@
         }
 
         .tag-primary {
-            background: rgba(52, 211, 153, 0.12);
+            background: rgba(0, 122, 255, 0.12);
             color: var(--accent-primary);
         }
 
         .tag-warm {
-            background: rgba(251, 113, 133, 0.12);
+            background: rgba(255, 59, 48, 0.12);
             color: var(--accent-warm);
         }
 
         .tag-gold {
-            background: rgba(251, 191, 36, 0.12);
+            background: rgba(255, 149, 0, 0.12);
             color: var(--accent-gold);
         }
 
@@ -450,7 +451,7 @@
             padding: 32px;
             margin-bottom: 24px;
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px) saturate(180%);
             position: relative;
             overflow: hidden;
         }
@@ -468,7 +469,7 @@
             right: 0;
             width: 150px;
             height: 150px;
-            background: radial-gradient(circle, rgba(52, 211, 153, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(0, 122, 255, 0.08) 0%, transparent 70%);
             pointer-events: none;
         }
 
@@ -512,7 +513,7 @@
         .day-theme {
             font-size: 13px;
             color: var(--text-secondary);
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(255, 255, 255, 0.7);
             padding: 8px 16px;
             border-radius: 50px;
             border: 1px solid var(--border);
@@ -525,7 +526,7 @@
             gap: 12px;
             margin-bottom: 24px;
             padding: 14px 16px;
-            background: rgba(15, 23, 42, 0.4);
+            background: rgba(255, 255, 255, 0.5);
             border-radius: var(--radius-sm);
             border: 1px solid var(--border);
         }
@@ -584,7 +585,7 @@
 
         .timeline-item.highlight::before {
             background: var(--accent-primary);
-            box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.2);
+            box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.2);
         }
 
         .timeline-time {
@@ -592,7 +593,7 @@
             font-size: 12px;
             font-weight: 700;
             color: var(--accent-primary);
-            background: rgba(52, 211, 153, 0.1);
+            background: rgba(0, 122, 255, 0.1);
             padding: 4px 10px;
             border-radius: 50px;
             margin-bottom: 6px;
@@ -625,7 +626,7 @@
             font-size: 12px;
             padding: 5px 10px;
             border-radius: 6px;
-            background: rgba(15, 23, 42, 0.5);
+            background: rgba(255, 255, 255, 0.6);
             border: 1px solid var(--border);
             color: var(--text-secondary);
         }
@@ -637,21 +638,21 @@
         }
 
         .detail-tag.cost {
-            background: rgba(251, 191, 36, 0.1);
-            border-color: rgba(251, 191, 36, 0.2);
+            background: rgba(255, 149, 0, 0.1);
+            border-color: rgba(255, 149, 0, 0.2);
             color: var(--accent-gold);
         }
 
         .detail-tag.duration {
-            background: rgba(251, 113, 133, 0.1);
-            border-color: rgba(251, 113, 133, 0.2);
+            background: rgba(255, 59, 48, 0.1);
+            border-color: rgba(255, 59, 48, 0.2);
             color: var(--accent-warm);
         }
 
         .timeline-tip {
             margin-top: 10px;
             padding: 12px 16px;
-            background: rgba(251, 191, 36, 0.08);
+            background: rgba(255, 149, 0, 0.08);
             border-left: 3px solid var(--accent-gold);
             border-radius: 0 10px 10px 0;
             font-size: 13px;
@@ -661,7 +662,7 @@
         .highlight-box {
             margin-top: 24px;
             padding: 18px 20px;
-            background: linear-gradient(135deg, rgba(52, 211, 153, 0.1) 0%, rgba(45, 212, 191, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.08) 0%, rgba(88, 86, 214, 0.04) 100%);
             border: 1px solid var(--border-highlight);
             border-radius: var(--radius-sm);
         }
@@ -695,7 +696,7 @@
         .tip-icon {
             width: 44px;
             height: 44px;
-            background: linear-gradient(135deg, rgba(52, 211, 153, 0.2) 0%, rgba(45, 212, 191, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.15) 0%, rgba(88, 86, 214, 0.15) 100%);
             border: 1px solid var(--border-highlight);
             color: var(--accent-primary);
             border-radius: 12px;
@@ -736,7 +737,7 @@
         }
 
         .pack-item {
-            background: rgba(52, 211, 153, 0.1);
+            background: rgba(0, 122, 255, 0.1);
             color: var(--accent-primary);
             padding: 6px 12px;
             border-radius: 50px;
@@ -761,7 +762,7 @@
         .cost-table th {
             color: var(--accent-primary);
             font-weight: 600;
-            background: rgba(52, 211, 153, 0.05);
+            background: rgba(0, 122, 255, 0.05);
         }
 
         .cost-table td {
@@ -775,7 +776,7 @@
         .cost-total {
             margin-top: 16px;
             padding: 16px;
-            background: rgba(52, 211, 153, 0.1);
+            background: rgba(0, 122, 255, 0.1);
             border: 1px solid var(--border-highlight);
             border-radius: var(--radius-sm);
             text-align: center;
@@ -1037,7 +1038,7 @@
             }
             body {
                 background: #fff;
-                color: #000;
+                color: #1c1c1e;
             }
         }
     </style>
@@ -1048,9 +1049,9 @@
     <div class="noise"></div>
 
     <header class="hero" id="top">
-        <a href="index_light.html" class="theme-toggle" title="切换浅色版">
-            <span class="theme-icon">☀️</span>
-            <span class="theme-text">浅色版</span>
+        <a href="index.html" class="theme-toggle" title="切换深色版">
+            <span class="theme-icon">🌙</span>
+            <span class="theme-text">深色版</span>
         </a>
         <div class="hero-badge">2026 夏季亲子游</div>
         <h1>武夷山 · 泉州</h1>
@@ -1774,7 +1775,7 @@
                         <th>项目</th>
                         <th>金额</th>
                     </tr>
-                    <tr style="background: rgba(52, 211, 153, 0.05);">
+                    <tr style="background: rgba(0, 122, 255, 0.05);">
                         <td colspan="3" style="font-weight: 700; color: var(--accent-primary);">✅ 已花费 / 已预订</td>
                     </tr>
                     <tr>
@@ -1809,11 +1810,11 @@
                         <td>九曲溪竹筏漂流 3人</td>
                         <td>390元</td>
                     </tr>
-                    <tr style="background: rgba(52, 211, 153, 0.08);">
+                    <tr style="background: rgba(0, 122, 255, 0.08);">
                         <td colspan="2" style="font-weight: 700;">已花费小计</td>
                         <td style="font-weight: 700; color: var(--accent-primary);">6091元</td>
                     </tr>
-                    <tr style="background: rgba(251, 191, 36, 0.05);">
+                    <tr style="background: rgba(255, 149, 0, 0.05);">
                         <td colspan="3" style="font-weight: 700; color: var(--accent-gold);">⏳ 待花费 / 预估</td>
                     </tr>
                     <tr>
@@ -1849,16 +1850,16 @@
                         <td>小费、小吃、清净寺门票等</td>
                         <td>约200–500元</td>
                     </tr>
-                    <tr style="background: rgba(251, 191, 36, 0.08);">
+                    <tr style="background: rgba(255, 149, 0, 0.08);">
                         <td colspan="2" style="font-weight: 700;">待花费小计</td>
                         <td style="font-weight: 700; color: var(--accent-gold);">约3460–6020元</td>
                     </tr>
                 </table>
-                <div class="cost-total" style="margin-top: 24px; background: linear-gradient(135deg, rgba(52, 211, 153, 0.1) 0%, rgba(251, 191, 36, 0.1) 100%); border: 1px solid var(--border-highlight);">
+                <div class="cost-total" style="margin-top: 24px; background: linear-gradient(135deg, rgba(0, 122, 255, 0.1) 0%, rgba(255, 149, 0, 0.1) 100%); border: 1px solid var(--border-highlight);">
                     <div style="font-size: 14px; color: var(--text-secondary); margin-bottom: 8px;">全程预估总费用（不含购物）</div>
                     <strong style="font-size: 28px;">约 9550 – 12110 元</strong>
                 </div>
-                <div style="margin-top: 16px; padding: 14px 16px; background: rgba(251, 113, 133, 0.08); border-left: 3px solid var(--accent-warm); border-radius: 0 10px 10px 0; font-size: 13px; color: var(--text-secondary);">
+                <div style="margin-top: 16px; padding: 14px 16px; background: rgba(255, 59, 48, 0.08); border-left: 3px solid var(--accent-warm); border-radius: 0 10px 10px 0; font-size: 13px; color: var(--text-secondary);">
                     📌 当前已实际支出 <strong style="color: var(--accent-warm);">6091元</strong>，剩余待花费约 <strong>3460–6020元</strong>。泉州第3晚住宿确定后，预算会更精确。
                 </div>
             </div>
