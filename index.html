@@ -658,6 +658,75 @@
             color: var(--text-secondary);
         }
 
+        .meal-recommend {
+            margin-top: 12px;
+            padding: 14px 16px;
+            background: rgba(251, 191, 36, 0.06);
+            border: 1px solid rgba(251, 191, 36, 0.12);
+            border-radius: 12px;
+        }
+
+        .meal-recommend-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .meal-item {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .meal-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .meal-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .meal-dishes {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .meal-transport {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed var(--border);
+            font-size: 12px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            line-height: 1.6;
+        }
+
+        .meal-tag {
+            display: inline-block;
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 50px;
+            background: rgba(52, 211, 153, 0.12);
+            color: var(--accent-primary);
+            font-weight: 500;
+        }
+
         .highlight-box {
             margin-top: 24px;
             padding: 18px 20px;
@@ -1230,10 +1299,26 @@
                         <span class="timeline-time">18:30</span>
                         <div class="timeline-content">
                             <h4>晚餐：初尝武夷味</h4>
-                            <p>可酒店内用餐，或打车至三姑度假区品尝当地菜</p>
+                            <p>打车至三姑度假区，品尝地道武夷菜</p>
                             <div class="timeline-detail">
                                 <span class="detail-tag transport">🚗 酒店→三姑度假区约10分钟</span>
                                 <span class="detail-tag cost">💰 打车约15–25元，晚餐约150–250元</span>
+                            </div>
+                            <div class="meal-recommend">
+                                <div class="meal-recommend-title">🍽️ 餐馆推荐</div>
+                                <div class="meal-item">
+                                    <div class="meal-name">棠宴·老武夷本地菜 <span class="meal-tag">本地菜</span></div>
+                                    <div class="meal-dishes">推荐：岚谷熏鹅、清蒸红眼鱼、猫爪菇、文公菜</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">炊烟山房菜 <span class="meal-tag">家常味</span></div>
+                                    <div class="meal-dishes">推荐：武夷焖鸡、红菇汤、笋干炒肉、土煮鱼</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">彭氏熏鹅 <span class="meal-tag">小吃</span></div>
+                                    <div class="meal-dishes">推荐：岚谷熏鹅、鹅胗、鹅翅，可打包回酒店</div>
+                                </div>
+                                <div class="meal-transport">🚗 交通：从大红袍山庄打车至三姑度假区约10分钟，约15–25元</div>
                             </div>
                         </div>
                     </div>
@@ -1320,10 +1405,26 @@
                         <span class="timeline-time">12:30</span>
                         <div class="timeline-content">
                             <h4>午餐</h4>
-                            <p>在武夷宫附近或三姑度假区用餐，清淡为主</p>
+                            <p>竹筏后可在武夷宫/宋街附近简单吃，或回三姑度假区</p>
                             <div class="timeline-detail">
                                 <span class="detail-tag transport">🚗 武夷宫→三姑度假区约10分钟</span>
                                 <span class="detail-tag cost">💰 打车约15–25元，午餐约120–200元</span>
+                            </div>
+                            <div class="meal-recommend">
+                                <div class="meal-recommend-title">🍽️ 餐馆推荐</div>
+                                <div class="meal-item">
+                                    <div class="meal-name">阿永水吉手敲扁肉 <span class="meal-tag"> locals推荐</span></div>
+                                    <div class="meal-dishes">推荐：手敲扁肉、拌面、牛肉丸汤，清淡开胃</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">宋街小吃 <span class="meal-tag">方便</span></div>
+                                    <div class="meal-dishes">推荐：光饼、笋包、茶叶蛋，边走边吃省时间</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">不知春斋 <span class="meal-tag">茶食</span></div>
+                                    <div class="meal-dishes">推荐：茶香小食、素面、武夷岩茶，环境清幽</div>
+                                </div>
+                                <div class="meal-transport">🚗 交通：宋街小吃可步行；阿永水吉/不知春斋从武夷宫打车约10分钟，约15–25元</div>
                             </div>
                         </div>
                     </div>
@@ -1350,6 +1451,33 @@
                             </div>
                             <div class="timeline-tip">
                                 💡 天游峰前山台阶较陡，带孩子建议爬到半山亭即可，不必强求登顶；若天气太热或孩子累了，改去玉女峰溪边玩水更轻松。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">18:00</span>
+                        <div class="timeline-content">
+                            <h4>晚餐</h4>
+                            <p>爬山后补充能量，尝尝武夷山本地小吃</p>
+                            <div class="timeline-detail">
+                                <span class="detail-tag transport">🚗 天游峰→三姑度假区约10–15分钟</span>
+                                <span class="detail-tag cost">💰 打车约15–25元，晚餐约100–180元</span>
+                            </div>
+                            <div class="meal-recommend">
+                                <div class="meal-recommend-title">🍽️ 餐馆推荐</div>
+                                <div class="meal-item">
+                                    <div class="meal-name">友谊小吃 <span class="meal-tag"> locals推荐</span></div>
+                                    <div class="meal-dishes">推荐：越南粉、牛肉粉、拌面，清淡暖胃</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">荣珍小吃 <span class="meal-tag">越南粉</span></div>
+                                    <div class="meal-dishes">推荐：特色越南粉、卤味、拌粉</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">旧街小光饼 <span class="meal-tag">小吃</span></div>
+                                    <div class="meal-dishes">推荐：光饼、清明粿、笋包，适合买几个尝</div>
+                                </div>
+                                <div class="meal-transport">🚗 交通：从天游峰/玉女峰返回三姑度假区约10–15分钟，约15–25元</div>
                             </div>
                         </div>
                     </div>
@@ -1420,9 +1548,25 @@
                         <span class="timeline-time">12:00</span>
                         <div class="timeline-content">
                             <h4>午餐</h4>
-                            <p>在三姑度假区或酒店附近简单用餐</p>
+                            <p>退房前在三姑度假区简单用餐</p>
                             <div class="timeline-detail">
                                 <span class="detail-tag cost">💰 约120–200元</span>
+                            </div>
+                            <div class="meal-recommend">
+                                <div class="meal-recommend-title">🍽️ 餐馆推荐</div>
+                                <div class="meal-item">
+                                    <div class="meal-name">邱记枫坡光饼清明粿 <span class="meal-tag"> locals推荐</span></div>
+                                    <div class="meal-dishes">推荐：光饼、清明粿、笋包，地道武夷早餐/午餐</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">文友书店对面笋包 <span class="meal-tag">小吃</span></div>
+                                    <div class="meal-dishes">推荐：笋包、光饼、豆腐脑，本地人喜欢</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">棠宴·老武夷本地菜 <span class="meal-tag">本地菜</span></div>
+                                    <div class="meal-dishes">推荐：如果前两天没吃，可补上岚谷熏鹅、红眼鱼</div>
+                                </div>
+                                <div class="meal-transport">🚗 交通：从大红袍山庄打车至三姑度假区约10分钟，约15–25元</div>
                             </div>
                         </div>
                     </div>
@@ -1465,10 +1609,26 @@
                         <span class="timeline-time">18:30</span>
                         <div class="timeline-content">
                             <h4>泉州第一餐</h4>
-                            <p>面线糊、姜母鸭、四果汤，开启泉州美食之旅</p>
+                            <p>到泉州必吃面线糊，开启闽南美食之旅</p>
                             <div class="timeline-detail">
                                 <span class="detail-tag transport">🚗 酒店→市区约20–30分钟</span>
-                                <span class="detail-tag cost">💰 打车约25–40元，晚餐约120–200元</span>
+                                <span class="detail-tag cost">💰 打车约25–40元，晚餐约80–150元</span>
+                            </div>
+                            <div class="meal-recommend">
+                                <div class="meal-recommend-title">🍽️ 餐馆推荐</div>
+                                <div class="meal-item">
+                                    <div class="meal-name">水门国仔面线糊 <span class="meal-tag"> locals推荐</span></div>
+                                    <div class="meal-dishes">推荐：面线糊 + 醋肉 + 大肠 + 油条，泉州早餐/夜宵之王</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">东兴牛肉店 <span class="meal-tag">牛肉</span></div>
+                                    <div class="meal-dishes">推荐：牛肉羹、咸饭、牛排、拌牛肚</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">秉正堂 <span class="meal-tag">甜品</span></div>
+                                    <div class="meal-dishes">推荐：四果汤、石花膏，饭后消暑解腻</div>
+                                </div>
+                                <div class="meal-transport">🚗 交通：从东海悦华酒店打车至市区约20–30分钟，约25–40元</div>
                             </div>
                         </div>
                     </div>
@@ -1526,10 +1686,26 @@
                         <span class="timeline-time">12:30</span>
                         <div class="timeline-content">
                             <h4>午餐</h4>
-                            <p>东兴牛肉店或好成财牛排馆</p>
+                            <p>西街附近吃小吃或闽南牛肉</p>
                             <div class="timeline-detail">
                                 <span class="detail-tag transport">🚶 西街步行可达</span>
-                                <span class="detail-tag cost">💰 午餐约100–180元</span>
+                                <span class="detail-tag cost">💰 午餐约80–150元</span>
+                            </div>
+                            <div class="meal-recommend">
+                                <div class="meal-recommend-title">🍽️ 餐馆推荐</div>
+                                <div class="meal-item">
+                                    <div class="meal-name">东兴牛肉店 <span class="meal-tag">老字号</span></div>
+                                    <div class="meal-dishes">推荐：牛肉羹、咸饭、牛排、拌牛杂</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">西街小吃 <span class="meal-tag">小吃</span></div>
+                                    <div class="meal-dishes">推荐：吴氏手工麻糍、满煎糕、亚佛春饼、润饼菜</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">侯阿婆肉粽 <span class="meal-tag">肉粽</span></div>
+                                    <div class="meal-dishes">推荐：烧肉粽、牛肉羹、拌面</div>
+                                </div>
+                                <div class="meal-transport">🚶 交通：均在开元寺/西街附近，步行可达；侯阿婆肉粽从西街步行约10分钟</div>
                             </div>
                         </div>
                     </div>
@@ -1563,10 +1739,26 @@
                         <span class="timeline-time">18:30</span>
                         <div class="timeline-content">
                             <h4>晚餐：姜母鸭</h4>
-                            <p>斯丹姜母鸭或忠记盐烧鸭，香气扑鼻</p>
+                            <p>来泉州必吃姜母鸭，暖心暖胃</p>
                             <div class="timeline-detail">
                                 <span class="detail-tag transport">🚗 可打车或小白车</span>
                                 <span class="detail-tag cost">💰 晚餐约150–250元</span>
+                            </div>
+                            <div class="meal-recommend">
+                                <div class="meal-recommend-title">🍽️ 餐馆推荐</div>
+                                <div class="meal-item">
+                                    <div class="meal-name">斯丹姜母鸭 <span class="meal-tag">人气老店</span></div>
+                                    <div class="meal-dishes">推荐：姜母鸭、鸭胗、鸭肠、紫菜蛋汤</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">忠记盐烧鸭 <span class="meal-tag">传统味</span></div>
+                                    <div class="meal-dishes">推荐：盐烧姜母鸭、海蛎煎、炒青菜</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">建来发饭店 <span class="meal-tag">闽南菜</span></div>
+                                    <div class="meal-dishes">推荐：姜母鸭、海蛎煎、椒盐蛏子、炒花蛤</div>
+                                </div>
+                                <div class="meal-transport">🚗 交通：从古城打车或小白车约10–15分钟，约15–25元；斯丹姜母鸭在涂门街，建来发在迎津街</div>
                             </div>
                         </div>
                     </div>
@@ -1624,10 +1816,26 @@
                         <span class="timeline-time">11:30</span>
                         <div class="timeline-content">
                             <h4>返回市区午餐</h4>
-                            <p>在市区找一家本地人多的餐馆，尝尝泉州家常菜</p>
+                            <p>尝尝本地人常去的闽南菜或小吃</p>
                             <div class="timeline-detail">
                                 <span class="detail-tag transport">🚗 洛阳桥→市区约30分钟</span>
-                                <span class="detail-tag cost">💰 打车约30–50元，午餐约120–200元</span>
+                                <span class="detail-tag cost">💰 打车约30–50元，午餐约100–180元</span>
+                            </div>
+                            <div class="meal-recommend">
+                                <div class="meal-recommend-title">🍽️ 餐馆推荐</div>
+                                <div class="meal-item">
+                                    <div class="meal-name">好成财牛排馆 <span class="meal-tag">老字号</span></div>
+                                    <div class="meal-dishes">推荐：牛排、牛肉羹、咸饭、牛杂汤</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">阿秋牛排 <span class="meal-tag"> locals推荐</span></div>
+                                    <div class="meal-dishes">推荐：牛排、牛杂汤、拌面，口味偏甜</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">水门国仔面线糊 <span class="meal-tag">小吃</span></div>
+                                    <div class="meal-dishes">推荐：面线糊 + 醋肉 + 卤大肠，简单满足</div>
+                                </div>
+                                <div class="meal-transport">🚗 交通：从洛阳桥打车返回市区约30分钟，约30–50元；好成财在涂门街，阿秋在湖心街</div>
                             </div>
                         </div>
                     </div>
@@ -1658,10 +1866,26 @@
                         <span class="timeline-time">18:00</span>
                         <div class="timeline-content">
                             <h4>晚餐</h4>
-                            <p>东海片区海鲜大排档，或再去市区吃小吃</p>
+                            <p>东海片区海鲜或回市区吃闽南菜</p>
                             <div class="timeline-detail">
                                 <span class="detail-tag transport">🚗 酒店附近或打车至市区</span>
                                 <span class="detail-tag cost">💰 打车约20–40元，晚餐约150–300元</span>
+                            </div>
+                            <div class="meal-recommend">
+                                <div class="meal-recommend-title">🍽️ 餐馆推荐</div>
+                                <div class="meal-item">
+                                    <div class="meal-name">东海泰禾广场闽南菜 <span class="meal-tag">近酒店</span></div>
+                                    <div class="meal-dishes">推荐：海蛎煎、醋肉、炒花蛤、紫菜饭</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">建来发饭店 <span class="meal-tag">闽南菜</span></div>
+                                    <div class="meal-dishes">推荐：姜母鸭、海蛎煎、椒盐蛏子、炒空心菜</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">阿姨鸡架 <span class="meal-tag">小吃</span></div>
+                                    <div class="meal-dishes">推荐：鸡架、四果汤、炸醋肉，适合小朋友</div>
+                                </div>
+                                <div class="meal-transport">🚗 交通：东海泰禾广场近酒店，步行或打车约5–10分钟；建来发/阿姨鸡架在市区，从五店市打车约30–40分钟，约40–60元</div>
                             </div>
                         </div>
                     </div>
@@ -1725,10 +1949,26 @@
                         <span class="timeline-time">11:00</span>
                         <div class="timeline-content">
                             <h4>告别午餐</h4>
-                            <p>再吃一碗热腾腾的面线糊或牛肉羹</p>
+                            <p>临走前再吃一顿泉州味</p>
                             <div class="timeline-detail">
                                 <span class="detail-tag transport">🚗 可酒店附近或市区</span>
                                 <span class="detail-tag cost">💰 午餐约80–150元</span>
+                            </div>
+                            <div class="meal-recommend">
+                                <div class="meal-recommend-title">🍽️ 餐馆推荐</div>
+                                <div class="meal-item">
+                                    <div class="meal-name">水门国仔面线糊 <span class="meal-tag"> locals推荐</span></div>
+                                    <div class="meal-dishes">推荐：面线糊 + 醋肉 + 大肠 + 油条</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">东兴牛肉店 <span class="meal-tag">牛肉</span></div>
+                                    <div class="meal-dishes">推荐：牛肉羹、咸饭、牛排</div>
+                                </div>
+                                <div class="meal-item">
+                                    <div class="meal-name">吴氏手工麻糍 <span class="meal-tag">甜品</span></div>
+                                    <div class="meal-dishes">推荐：手工麻糍、满煎糕，可打包路上吃</div>
+                                </div>
+                                <div class="meal-transport">🚗 交通：从东海悦华酒店打车至市区约20–30分钟，约25–40元；建议选酒店附近或顺路店铺，吃完直接去泉州南站</div>
                             </div>
                         </div>
                     </div>
